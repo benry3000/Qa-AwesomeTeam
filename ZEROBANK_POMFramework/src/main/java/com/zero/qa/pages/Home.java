@@ -1,5 +1,6 @@
 package com.zero.qa.pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -56,15 +57,42 @@ public class Home extends TestBase{
 	
 	
 	public void clickOnOnlineBanking() { //click on onlinebanking tab
-		Actions action = new Actions(driver);
-		action.moveToElement(onlineBanking).build().perform();
 		onlineBanking.click();
 	}
 	
+	public void clickOnFeedBack() { //click on Feedback
+
+		feedback.click();
+	}
 	
+	public void clickOnMoreServices() { //click on More Services
+		Actions action = new Actions(driver);
+		action.moveToElement(moreServicesBtn).build().perform();
+		moreServicesBtn.click();
+	}
 	
+	public void clickOnCheckAccountActivity() { //click on Account Activity
+
+		accountActivityLink.click();
+	}
 	
+	public void clickOnTransferFunds() { //click on transfer funds
+		accountActivityLink.click();
+	}
+	public void clickOnMyMoneyMap() { //click on money map
+		moneyMapLink.click();
+	}
+	public void clickOnSignin() { //click on sign in
+		siginBtn.click();
+	}
 	
+	public void searchType(String i) // click 
+	{
+		search.sendKeys(i);
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.ENTER).build().perform();
+		
+	}
 }
 
 /*
@@ -83,5 +111,4 @@ my moneymap Ankit
 online statements Hassan
 help Hassan
 forgotten password Hassan
-
 */

@@ -39,4 +39,6 @@ public class TransferFunds extends TestBase{
 	public String validateTransferFundsTitle() { //get title of page
 		return driver.getTitle();
 	}
+	
+	
 }

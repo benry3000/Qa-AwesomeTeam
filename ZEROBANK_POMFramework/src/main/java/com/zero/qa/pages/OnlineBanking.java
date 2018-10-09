@@ -42,6 +42,9 @@ public class OnlineBanking extends TestBase {
 	@FindBy(id = "online_statements_link")
 	WebElement onlineStatementsLink;
 	
+	@FindBy(id = "homeMenu")
+	WebElement home;
+	
 	public OnlineBanking() { 
 		PageFactory.initElements(driver, this);
 	}
@@ -49,5 +52,25 @@ public class OnlineBanking extends TestBase {
 	public String validateOnlineBankingTitle() { //get title of page
 		return driver.getTitle();
 	}
+	
+	public void clickOnAccountSummary() { //click on account summary
+		accountSummaryLink.click();
+	}
+	
+	public void clickOnOnlineStatements() { //click on sign in
+		onlineStatementsLink.click();
+	}
+	public void clickOnPayBills() { //click on sign in
+		payBillsLink.click();
+	}
+	
+	public void clickOnFeedBack() { //click on Feedback
 
+		feedback.click();
+	}
+
+	public void clickOnHome() { //click on Home
+
+		home.click();
+	}
 }
