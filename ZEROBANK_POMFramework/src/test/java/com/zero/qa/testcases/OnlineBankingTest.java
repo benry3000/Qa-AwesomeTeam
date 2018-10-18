@@ -21,10 +21,13 @@ public class OnlineBankingTest extends TestBase {
 	public void setUp() {
 		initialization();
 		onlinebanking = new OnlineBanking();
+		onlinebanking.clickOnOnlineBankingTab();
+		
 	}
 	
 	@Test(priority=1) //title
 	public void validateTitle() {
+		
 		String title = onlinebanking.validateOnlineBankingTitle();
 		Assert.assertEquals(title, "Zero - Free Access to Online Banking");
 		

@@ -40,6 +40,8 @@ public class FeedBack extends TestBase {
 	//clear fields
 	@FindBy(name = "clear")
 	WebElement clear;
+	@FindBy(id = "feedback")
+	WebElement feedback;
 	
 	public FeedBack() { 
 		PageFactory.initElements(driver, this);
@@ -61,6 +63,8 @@ public class FeedBack extends TestBase {
 
 		clear.click();
 	}
+
+	
 	public void nameType(String i) // type in name field 
 	{
 		name.sendKeys(i);
@@ -71,10 +75,14 @@ public class FeedBack extends TestBase {
 	}
 	public void subjectType(String i) // type in subject field 
 	{
-		email.sendKeys(i);
+		subject.sendKeys(i);
 	}
 	public void commentType(String i) // type in comment field 
 	{
 		comment.sendKeys(i);
+	}
+	
+	public boolean checkNameIsDisplayed() {
+		return name.isDisplayed();
 	}
 }

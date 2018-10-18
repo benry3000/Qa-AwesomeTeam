@@ -16,7 +16,7 @@ public class Home extends TestBase{
 	@FindBy(id = "signin_button")
 	WebElement siginBtn;	
 	//Online Banking link
-	@FindBy(id = "Online Banking")
+	@FindBy(id = "onlineBankingMenu")
 	WebElement onlineBanking;
 	//Feedback Link
 	@FindBy(id = "feedback")
@@ -60,9 +60,10 @@ public class Home extends TestBase{
 		onlineBanking.click();
 	}
 	
-	public void clickOnFeedBack() { //click on Feedback
+	public FeedBack clickOnFeedBack() { //click on Feedback
 
 		feedback.click();
+		return new FeedBack();
 	}
 	
 	public void clickOnMoreServices() { //click on More Services

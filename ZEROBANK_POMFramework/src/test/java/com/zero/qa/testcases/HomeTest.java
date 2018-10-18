@@ -35,7 +35,7 @@ public class HomeTest extends TestBase{
 	@Test(priority=2) //Click Online Banking
 	public void validateOnlineBanking() {
 		home.clickOnOnlineBanking();
-		String title = ob.validateOnlineBankingTitle();
+		String title = driver.getTitle();
 		Assert.assertEquals(title, "Zero - Free Access to Online Banking");
 		
 	}

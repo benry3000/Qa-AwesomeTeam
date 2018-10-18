@@ -45,6 +45,9 @@ public class OnlineBanking extends TestBase {
 	@FindBy(id = "homeMenu")
 	WebElement home;
 	
+	@FindBy(id = "onlineBankingMenu")
+	WebElement onlineTab;
+	
 	public OnlineBanking() { 
 		PageFactory.initElements(driver, this);
 	}
@@ -72,5 +75,9 @@ public class OnlineBanking extends TestBase {
 	public void clickOnHome() { //click on Home
 
 		home.click();
+	}
+	public void clickOnOnlineBankingTab() { //click on Home
+
+		onlineTab.click();
 	}
 }
