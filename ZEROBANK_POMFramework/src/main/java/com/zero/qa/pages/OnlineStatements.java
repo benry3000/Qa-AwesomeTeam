@@ -27,11 +27,32 @@ public class OnlineStatements extends TestBase
 	@FindBy(xpath = "//a[containstext(),'2009']")
 	WebElement Tab2009;
 	
-	public OnlineStatements() { 
+	public OnlineStatements()
+	{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public String validateOnlineStatementsTitle() { //get title of page
+	public String verifyTitle()
+	{
 		return driver.getTitle();
 	}
+	
+	public void ClickOnTab2012()
+	{
+		Tab2012.click();
+	}
+	public void ClickOnTab2011()
+	{
+		Tab2011.click();
+	}
+	public void ClickOnTab2010()
+	{
+		Tab2010.click();
+	}
+	public void ClickOnTab2009()
+	{
+		Tab2009.click();
+	}
+	
+	
 }

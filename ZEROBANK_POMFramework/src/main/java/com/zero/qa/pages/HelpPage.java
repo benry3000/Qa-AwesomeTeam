@@ -13,18 +13,35 @@ public class HelpPage extends TestBase
 	WebElement LogIntoLink;
 	
 	//(How do I transfer funds?) Link
-	@FindBy(xpath = "//a[containstext(),'transfer funds?']")
+	@FindBy(partialLinkText= "How do I transfer funds?")
 	WebElement TransferFundsLink;
 	
 	//(How do I pay bills?) Link
-	@FindBy(xpath = "//a[containstext(),'pay bills?']")
+	@FindBy(partialLinkText = "How do I pay bills?")
 	WebElement PayBillsLink;
 	
-	public HelpPage() { 
+	public HelpPage()
+	{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public String validateHelpPageTitle() { //get title of page
+	public String ValidateTitle()
+	{
 		return driver.getTitle();
 	}
+	
+	public void ClickOnLogIntoLink()
+	{
+		LogIntoLink.click();
+	}
+	public void TransferFundLink()
+	{
+		TransferFundsLink.click();
+	}
+	public void PayBillLink()
+	{
+		PayBillsLink.click();
+	}
 }
+
+

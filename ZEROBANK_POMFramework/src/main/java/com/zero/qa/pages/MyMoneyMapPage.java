@@ -1,12 +1,16 @@
 package com.zero.qa.pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.zero.qa.base.TestBase;
 
 public class MyMoneyMapPage extends TestBase {
+	
+	@FindBy(xpath="//tspan[contains(text(),'OutFlow Chart')]")
+	WebElement moneyMapHeader;
 
 	@FindBy(id = "ext-sprite-1271")
 	WebElement transportationHover;
@@ -64,8 +68,24 @@ public class MyMoneyMapPage extends TestBase {
 	}
 
 	// Actions:
-	public String validateMyMoneyMapPageTitle() {
+	public String validateMMMPTitle() {
 		return driver.getTitle();
 	}
+	
+	public boolean verifyMMPHeader() {
+		return moneyMapHeader.isDisplayed();
+	}
+	
+	public void mapHoverPage() {
+		Actions act = new Actions(driver);
+		// hover and click Transportation 
+		act.moveToElement(transportationHover).build().perform();
+		transportation.click();
+		
+		// hover and click Insurance 
+		act.moveToElement(insuranceHover).build().perform();
+		insurance.click();
+	}
+	
 
 }
