@@ -8,6 +8,12 @@ import org.openqa.selenium.support.ui.Select;
 import com.zero.qa.base.TestBase;
 
 public class PurForCurPage extends TestBase {
+	
+	@FindBy(id = "pay_bills_tab")
+	WebElement payBillTab;
+	
+	@FindBy(xpath = "//*[@id=\'tabs\']/ul/li[3]/a")
+	WebElement purFurCurTab;
 
 	@FindBy(xpath = "//a[contains(text(), 'Pay Bills')]")
 	WebElement payBillLink;
@@ -15,7 +21,7 @@ public class PurForCurPage extends TestBase {
 	@FindBy(xpath = "//a[contains(text(),'Purchase Foreign Currency')]")
 	WebElement purForCurTab;
 
-	@FindBy(tagName = "h2")
+	@FindBy(xpath = "//*[@id=\'ui-tabs-3\']/h2")
 	WebElement purForCurHeader;
 	
 	@FindBy(id = "pc_currency")
@@ -50,16 +56,20 @@ public class PurForCurPage extends TestBase {
 	@FindBy(id = "alert_content")
 	WebElement addConfirmation;
 	
-	@FindBy(partialLinkText = "Purchase Foreign Currency")
-	WebElement PFC;
-	
-	
 
 	// Initializing the Page Objects:
 	public PurForCurPage() {
 		PageFactory.initElements(driver, this);
 	}
 
+	public void clickOnPayBillTab(){
+		payBillTab.click();
+	}
+	
+	public void clickOnpurFurCurTab(){
+		purFurCurTab.click();
+	}
+	
 	// Actions:
 	public String verifyPurForCurPageTitle() {
 		return driver.getTitle();
@@ -105,10 +115,6 @@ public class PurForCurPage extends TestBase {
 	
 	public boolean purchaseConfirmation() {
 		return addConfirmation.isDisplayed();
-	}
-	
-	public void PFCClick() {
-		PFC.click();
 	}
 
 }

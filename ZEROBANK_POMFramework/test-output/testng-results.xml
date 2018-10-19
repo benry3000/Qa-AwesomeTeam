@@ -1,49 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26396" started-at="2018-10-18T17:37:41Z" finished-at="2018-10-18T17:38:08Z">
+  <suite name="Default suite" duration-ms="75531" started-at="2018-10-19T02:58:09Z" finished-at="2018-10-19T02:59:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26396" started-at="2018-10-18T17:37:41Z" finished-at="2018-10-18T17:38:08Z">
-      <class name="com.zero.qa.testcases.AccountSummaryTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.zero.qa.testcases.AccountSummaryTest@7085bdee]" name="setUp" is-config="true" duration-ms="7875" started-at="2018-10-18T17:37:41Z" finished-at="2018-10-18T17:37:49Z">
+    <test name="Default test" duration-ms="75531" started-at="2018-10-19T02:58:09Z" finished-at="2018-10-19T02:59:24Z">
+      <class name="com.zero.qa.testcases.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.zero.qa.testcases.LoginPageTest@7085bdee]" name="setUp" is-config="true" duration-ms="10450" started-at="2018-10-19T02:58:09Z" finished-at="2018-10-19T02:58:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyAccountSummaryTitleTest()[pri:1, instance:com.zero.qa.testcases.AccountSummaryTest@7085bdee]" name="verifyAccountSummaryTitleTest" duration-ms="23" started-at="2018-10-18T17:37:49Z" finished-at="2018-10-18T17:37:49Z">
+        <test-method status="PASS" signature="BreakingTheSite()[pri:7, instance:com.zero.qa.testcases.LoginPageTest@7085bdee]" name="BreakingTheSite" duration-ms="64084" started-at="2018-10-19T02:58:19Z" finished-at="2018-10-19T02:59:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAccountSummaryTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.zero.qa.testcases.AccountSummaryTest@7085bdee]" name="tearDown" is-config="true" duration-ms="736" started-at="2018-10-18T17:37:49Z" finished-at="2018-10-18T17:37:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.zero.qa.testcases.AccountSummaryTest@7085bdee]" name="setUp" is-config="true" duration-ms="7591" started-at="2018-10-18T17:37:50Z" finished-at="2018-10-18T17:37:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyBrokerageTest()[pri:2, instance:com.zero.qa.testcases.AccountSummaryTest@7085bdee]" name="verifyBrokerageTest" duration-ms="380" started-at="2018-10-18T17:37:57Z" finished-at="2018-10-18T17:37:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyBrokerageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.zero.qa.testcases.AccountSummaryTest@7085bdee]" name="tearDown" is-config="true" duration-ms="723" started-at="2018-10-18T17:37:58Z" finished-at="2018-10-18T17:37:59Z">
+        </test-method> <!-- BreakingTheSite -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.zero.qa.testcases.LoginPageTest@7085bdee]" name="tearDown" is-config="true" duration-ms="965" started-at="2018-10-19T02:59:23Z" finished-at="2018-10-19T02:59:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.zero.qa.testcases.AccountSummaryTest@7085bdee]" name="setUp" is-config="true" duration-ms="8215" started-at="2018-10-18T17:37:59Z" finished-at="2018-10-18T17:38:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyCC()[pri:3, instance:com.zero.qa.testcases.AccountSummaryTest@7085bdee]" name="verifyCC" duration-ms="69" started-at="2018-10-18T17:38:07Z" finished-at="2018-10-18T17:38:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCC -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.zero.qa.testcases.AccountSummaryTest@7085bdee]" name="tearDown" is-config="true" duration-ms="736" started-at="2018-10-18T17:38:07Z" finished-at="2018-10-18T17:38:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.zero.qa.testcases.AccountSummaryTest -->
+      </class> <!-- com.zero.qa.testcases.LoginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

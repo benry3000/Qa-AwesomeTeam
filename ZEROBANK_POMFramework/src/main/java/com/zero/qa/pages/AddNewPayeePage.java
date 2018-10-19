@@ -11,22 +11,25 @@ public class AddNewPayeePage extends TestBase {
 	@FindBy(xpath = "//a[@class='brand']")
 	WebElement zeroLogo;
 	
-	@FindBy(xpath = "//a[@href='#ui-tabs-2')]")
+	@FindBy(id = "pay_bills_tab")
+	WebElement payBillTab;
+	
+	@FindBy(xpath = "//*[@id=\'tabs\']/ul/li[2]/a")
 	WebElement addNewPayTab;
-
-	@FindBy(xpath = "//h2[contains(text(),'Who are you paying?')]")
+	
+	@FindBy(xpath = "//*[@id=\'ui-tabs-2\']/h2")
 	WebElement addNewPayHeader;
 
 	@FindBy(id = "np_new_payee_name")
 	WebElement payeeName;
 
-	@FindBy(xpath = "//label[@for='np_new_payee_address']")
+	@FindBy(id = "np_new_payee_address")
 	WebElement payeeAddress;
 
-	@FindBy(xpath = "//label[@for='np_new_payee_account']")
+	@FindBy(id = "np_new_payee_account")
 	WebElement account;
 
-	@FindBy(xpath = "//label[@for='np_new_payee_details']")
+	@FindBy(id = "np_new_payee_details")
 	WebElement payeeDetails;
 
 	@FindBy(id = "add_new_payee")
@@ -47,6 +50,10 @@ public class AddNewPayeePage extends TestBase {
 
 	public boolean verifyZeroLogo() {
 		return zeroLogo.isDisplayed();
+	}
+	
+	public void clickOnPayBillTab(){
+		payBillTab.click();
 	}
 	
 	public void clickOnaddNewPayTab(){

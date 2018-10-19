@@ -1,5 +1,16 @@
 package com.zero.qa.pages;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -67,6 +78,66 @@ public class LoginPage extends TestBase {
 		}
 		public void clickOnForgotPass(){
 			forgotPass.click();
+		}
+		
+		public void stressInput() throws IOException
+		{
+			List<String> un = new ArrayList();
+			List<String> pass = new ArrayList();
+			
+			File file = new File("C:\\Users\\benry.dong\\Documents\\Stress.xlsx");
+			FileInputStream fis = new FileInputStream(file);
+			XSSFWorkbook wb = new XSSFWorkbook(fis);
+			XSSFSheet st = wb.getSheetAt(0);
+			Iterator<Row> rowLine = st.iterator();
+			while(rowLine.hasNext()) {
+				Row row = rowLine.next();
+				un.add(row.getCell(0).toString());
+				pass.add(row.getCell(1).toString());
+			}
+			
+			wb.close();
+			fis.close();
+			
+			for(int i = 0; i < un.size(); i++)
+			{
+				userLogin.sendKeys(un.get(i));
+				userPassword.sendKeys(pass.get(i));
+				signInBtn.click();
+			}    	
+			
+		}
+		
+		public void spikeInput() throws IOException, InterruptedException
+		{
+			List<String> un = new ArrayList();
+			List<String> pass = new ArrayList();
+			
+			File file = new File("C:\\Users\\benry.dong\\Documents\\Spike.xlsx");
+			FileInputStream fis = new FileInputStream(file);
+			XSSFWorkbook wb = new XSSFWorkbook(fis);
+			XSSFSheet st = wb.getSheetAt(0);
+			Iterator<Row> rowLine = st.iterator();
+			while(rowLine.hasNext()) {
+				Row row = rowLine.next();
+				un.add(row.getCell(0).toString());
+				pass.add(row.getCell(1).toString());
+			}
+			
+			wb.close();
+			fis.close();
+			Thread.sleep(2000); // 2 second delay
+			for(int l = 0; l < 4; l++)
+			{
+				Thread.sleep(2000); //2 second intervals
+				for(int i = 0; i < un.size(); i++)
+				{
+					userLogin.sendKeys(un.get(i));
+					userPassword.sendKeys(pass.get(i));
+					signInBtn.click();
+				}   
+			}
+			
 		}
 
 		

@@ -25,20 +25,20 @@ public class FeedBackTest extends TestBase {
 		feedback = homePage.clickOnFeedBack();
 	}
 	
-	@Test//title 1
+	@Test(priority=1)//title 1
 	public void validateTitle() {
 		String title = feedback.validateFeedBackTitle();
 		Assert.assertEquals(title, "Zero - Contact Us");
 	}
 	
-	@Test //empty message 2
+	@Test(priority=2) //empty message 2
 	public void sendEmptyMessage() {
 		feedback.clickOnSubmit();
 		String title = feedback.validateFeedBackTitle();
 		Assert.assertTrue(feedback.checkNameIsDisplayed());
 	}
 	
-	@Test //send valid message 3
+	@Test(priority=3) //send valid message 3
 	public void sendValidMessage() {
 	
 		feedback.nameType("ben");
@@ -51,7 +51,7 @@ public class FeedBackTest extends TestBase {
 		
 	}
 	
-	@Test //invalid email 4
+	@Test(priority=4) //invalid email 4
 	public void sendInvalidEmail() {
 		
 		feedback.nameType("ben");
@@ -64,7 +64,7 @@ public class FeedBackTest extends TestBase {
 		
 	}
 	
-	@Test // leave email blank 5
+	@Test(priority=5) // leave email blank 5
 	public void sendEmptyEmail() {
 		feedback.nameType("ben");
 		feedback.emailType("");
@@ -75,17 +75,17 @@ public class FeedBackTest extends TestBase {
 		Assert.assertFalse(title.contentEquals("http://zero.webappsecurity.com/sendFeedback.html"));
 	}
 	
-	@Test //leave subject empty 6
+	@Test(priority=6) //leave subject empty 6
 	public void sendEmptySubject() {
 		feedback.nameType("ben");
 		feedback.emailType("ben123@yahoo.com");
 		feedback.subjectType("");
 		feedback.commentType("HelloWorld");
 		feedback.clickOnSubmit();
-		Assert.assertFalse(feedback.checkNameIsDisplayed());
+		Assert.assertTrue(feedback.checkNameIsDisplayed());
 	}
 	
-	@Test //leave comment empty 7
+	@Test(priority=7) //leave comment empty 7
 	public void sendEmptyComment() {
 		
 		feedback.nameType("ben");
@@ -93,10 +93,10 @@ public class FeedBackTest extends TestBase {
 		feedback.subjectType("Hello");
 		feedback.commentType("");
 		feedback.clickOnSubmit();
-		Assert.assertFalse(feedback.checkNameIsDisplayed());
+		Assert.assertTrue(feedback.checkNameIsDisplayed());
 	}
 	
-	@Test //title 8
+	@Test(priority=8) //title 8
 	public void validateFAQ() {
 		feedback.clickOnFaq();
 		String title = driver.getTitle();

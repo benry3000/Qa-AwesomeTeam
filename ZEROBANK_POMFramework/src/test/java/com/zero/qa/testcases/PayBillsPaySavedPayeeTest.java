@@ -53,7 +53,8 @@ public class PayBillsPaySavedPayeeTest extends TestBase {
 	}
 	
 	@Test(priority=3)
-	public void invalidMakePayment() {
+	public void invalidMakePayment() // suppose to fail
+	{
 		PayBills.Payee("Apple");
 		PayBills.Account("Savings");
 		PayBills.Amount("abcdefghijkmnopqrstuvwxyz");

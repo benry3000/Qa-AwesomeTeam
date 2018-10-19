@@ -62,9 +62,10 @@ public class TransferFundsTest extends TestBase {
 		transferFund.Submit();
 		transferFund.Submit1();
 		String url = driver.getCurrentUrl();
-		Assert.assertEquals(url,"http://zero.webappsecurity.com/bank/transfer-funds.html");
+		Assert.assertEquals(url,"http://zero.webappsecurity.com/bank/transfer-funds-verify.html");
 		
 	}
+	
 	
 	@AfterMethod
 	public void tearDown() {

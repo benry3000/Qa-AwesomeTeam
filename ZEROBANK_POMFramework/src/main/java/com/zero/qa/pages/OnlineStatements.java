@@ -16,15 +16,15 @@ public class OnlineStatements extends TestBase
 	WebElement Tab2012;
 	
 	//Under the Account Savings Tab, this is the 2011 Element of Recent Statements
-	@FindBy(xpath = "//a[containstext(),'2011']")
+	@FindBy(xpath = "//*[@id=\"online_statements_for_account\"]/div/div/div[2]/ul/li[2]/a")
 	WebElement Tab2011;
 		
 		//Under the Account Savings Tab, this is the 2010 Element of Recent Statements
-	@FindBy(xpath = "//a[containstext(),'2010']")
+	@FindBy(xpath = "//*[@id=\"online_statements_for_account\"]/div/div/div[2]/ul/li[3]/a")
 	WebElement Tab2010;
 	
 	//Under the Account Savings Tab, this is the 2009 Element of Recent Statements
-	@FindBy(xpath = "//a[containstext(),'2009']")
+	@FindBy(xpath = "//*[@id=\"online_statements_for_account\"]/div/div/div[2]/ul/li[4]/a")
 	WebElement Tab2009;
 	
 	public OnlineStatements()
