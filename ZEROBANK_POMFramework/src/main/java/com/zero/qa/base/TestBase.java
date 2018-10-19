@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
@@ -35,7 +36,10 @@ public class TestBase {
 		String browserName = prop.getProperty("browser");
 		if(browserName.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver","C:\\SeleniumBrowserDrivers\\chromedriver.exe");
-			driver = new ChromeDriver(); 
+//			ChromeOptions options = new ChromeOptions();
+//			options.addArguments("--headless");
+//			driver = new ChromeDriver(options); 
+			driver = new ChromeDriver();
 		}else if(browserName.equals("ff")){
 			System.setProperty("webdriver.gecko.driver", "C:\\SeleniumBrowserDrivers\\geckodriver.exe");	
 			driver = new FirefoxDriver(); 

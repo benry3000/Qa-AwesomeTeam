@@ -40,6 +40,8 @@ public class FeedBack extends TestBase {
 	//clear fields
 	@FindBy(name = "clear")
 	WebElement clear;
+	@FindBy(id = "feedback")
+	WebElement feedback;
 	
 	public FeedBack() { 
 		PageFactory.initElements(driver, this);
@@ -47,5 +49,40 @@ public class FeedBack extends TestBase {
 	
 	public String validateFeedBackTitle() { //get title of page
 		return driver.getTitle();
+	}
+	
+	public void clickOnFaq() { //click on faq link
+
+		faqLink.click();
+	}
+	public void clickOnSubmit() { //click on send message
+
+		submit.click();
+	}
+	public void clickOnClear() { //click on clear
+
+		clear.click();
+	}
+
+	
+	public void nameType(String i) // type in name field 
+	{
+		name.sendKeys(i);
+	}
+	public void emailType(String i) // type in email field 
+	{
+		email.sendKeys(i);
+	}
+	public void subjectType(String i) // type in subject field 
+	{
+		subject.sendKeys(i);
+	}
+	public void commentType(String i) // type in comment field 
+	{
+		comment.sendKeys(i);
+	}
+	
+	public boolean checkNameIsDisplayed() {
+		return name.isDisplayed();
 	}
 }
